@@ -9,3 +9,6 @@ coverage/
 package-lock.json
 yarn-error.log
 yarn.lock
+
+# Ignore Nova editor settings
+.nova/
