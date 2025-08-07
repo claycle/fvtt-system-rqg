@@ -798,7 +798,7 @@ export function getActorLinkDecoration(actor: RqgActor | null | undefined): stri
  * Fetch and play a specified audio cue from the settings.
  * Return null on no errors. Returns {rc:..., msg:...} on error.
  */
-export function playAudioCue(cue: string, vol: number = 0.8): integer {
+export function playAudioCue(cue: string, vol: number = 0.8): Object {
   let rc = null;
   const cues = getGame().settings.get(systemId, "defaultAudioCuesSettings");
   const cueToPlay = cues ? cues[cue] : null;
