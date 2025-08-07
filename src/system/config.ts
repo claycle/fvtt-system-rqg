@@ -156,3 +156,5 @@ export const RQG_CONFIG = {
 export type RqgConfig = typeof RQG_CONFIG;
 
 export const systemId = "rqg";
+
+export const defaultAudioCuePath = "public/sounds/notify.wav";

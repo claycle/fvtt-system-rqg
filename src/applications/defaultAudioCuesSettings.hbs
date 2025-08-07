@@ -1,0 +1,16 @@
+<form>
+  <h2 class="module-header">{{localize "RQG.Settings.DefaultAudioCues.settingName"}}</h2>
+
+  {{#each this}}
+    <div class="form-group">
+      <label>
+        <span>{{localizeaudiocuetype @key}}</span>
+        {{filePicker target=@key type="audio"}}
+      </label>
+      <div class="form-fields">
+        <input type="text" id="{{@key}}" value="{{this}}" name="{{@key}}" />
+      </div>
+    </div>
+  {{/each}}
+
+</form>

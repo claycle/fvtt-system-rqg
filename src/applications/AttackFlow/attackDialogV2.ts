@@ -14,6 +14,7 @@ import {
   localize,
   requireValue,
   RqgError,
+  playAudioCue,
 } from "../../system/util";
 import type { RqgActor } from "../../actors/rqgActor";
 import type { RqgItem } from "../../items/rqgItem";
@@ -33,6 +34,7 @@ import { RqgChatMessage } from "../../chat/RqgChatMessage";
 import { AbilityRoll } from "../../rolls/AbilityRoll/AbilityRoll";
 import type { HitLocationRollOptions } from "../../rolls/HitLocationRoll/HitLocationRoll.types";
 import { HitLocationRoll } from "../../rolls/HitLocationRoll/HitLocationRoll";
+import { AudioCuesEnum } from "../defaultAudioCuesSettings.ts";
 
 // @ts-expect-error application v2
 const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api;
@@ -462,6 +464,8 @@ export class AttackDialogV2 extends HandlebarsApplicationMixin(ApplicationV2) {
     // @ts-expect-error type
     const cm = await ChatMessage.create(attackChatMessageOptions);
     cm?.render(true);
+
+    playAudioCue(AudioCuesEnum.defend);
   }
 
   /**

@@ -5,6 +5,8 @@ import { systemId } from "./config";
 import { defaultItemIconsObject } from "./settings/defaultItemIcons";
 import TokenRulerSettings from "../applications/settings/tokenRulerSettings";
 import { defaultTokenRulerSettings } from "./settings/defaultTokenRulerSettings";
+import { DefaultAudioCuesSettings } from "../applications/defaultAudioCuesSettings";
+import { defaultAudioCuesObject } from "./settings/defaultAudioCues";
 
 export const registerRqgSystemSettings = function () {
   getGame().settings.register(systemId, "worldLanguage", {
@@ -128,6 +130,23 @@ export const registerRqgSystemSettings = function () {
     config: true,
     type: Boolean,
     default: false,
+  });
+
+  // Audio Cues
+  getGame().settings.registerMenu(systemId, "defaultAudioCuesSettings", {
+    name: "RQG.Settings.DefaultAudioCues.settingName",
+    label: "RQG.Settings.DefaultAudioCues.settingLabel",
+    hint: "RQG.Settings.DefaultAudioCues.settingHint",
+    icon: "fas fa-audio",
+    type: DefaultAudioCuesSettings,
+    restricted: true,
+  });
+
+  getGame().settings.register(systemId, "defaultAudioCuesSettings", {
+    scope: "world",
+    config: false,
+    type: Object as any, // TODO how to type?
+    default: defaultAudioCuesObject,
   });
 
   getGame().settings.register(systemId, "actor-wizard-feature-flag", {

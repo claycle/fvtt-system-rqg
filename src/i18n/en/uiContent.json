@@ -25,6 +25,11 @@
     },
     "RegionBehavior": {
       "clickableScripts": "Click to Execute Script"
+    },
+    "AudioCues": {
+      "defend": "Defend Cue",
+      "spiritmagic": "Spirit Magic Cue",
+      "runemagic": "Rune Magic Cue"
     }
   },
   "COMBAT": {
@@ -470,7 +475,7 @@
         "UnawareTarget": "Unaware Target",
         "Darkness": "Darkness",
         "OtherModifier": "Other Modifier",
-        "DamageBonusFrom":"Damage Bonus from",
+        "DamageBonusFrom": "Damage Bonus from",
         "ExtraDamage": "Extra Damage",
         "UsedLastOfAmmoWarn": "You just used the last of your {projectileName}!",
         "OutOfAmmoWarn": "You don't have any {projectileName} to {combatManeuverName}!",
@@ -1405,6 +1410,12 @@
           "Sprint": "Color for Sprint",
           "Unreachable": "Color for Unreachable"
         }
+      },
+      "DefaultAudioCues": {
+        "dialogTitle": "Default Audio Cue Settings",
+        "settingName": "Default Audio Cues",
+        "settingLabel": "Configure Audio Cues",
+        "settingHint": "Set the default audio cues for the game."
       }
     },
     "TokenEffects": {

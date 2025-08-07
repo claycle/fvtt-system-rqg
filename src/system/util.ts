@@ -613,6 +613,10 @@ export function localizeItemType(itemType: ItemTypeEnum | "reputation"): string 
   return localize("TYPES.Item." + itemType);
 }
 
+export function localizeAudioCuesType(audioCueType: string): string {
+  return localize("TYPES.AudioCues." + audioCueType);
+}
+
 export function localizeDocumentName(documentName: string | undefined): string {
   return documentName ? localize("DOCUMENT." + documentName) : "";
 }
@@ -788,4 +792,30 @@ export function getActorLinkDecoration(actor: RqgActor | null | undefined): stri
   } else {
     return "";
   }
+}
+
+/**
+ * Fetch and play a specified audio cue from the settings.
+ * Return null on no errors. Returns {rc:..., msg:...} on error.
+ */
+export function playAudioCue(cue: string, vol: number = 0.8): integer {
+  let rc = null;
+  const cues = getGame().settings.get(systemId, "defaultAudioCuesSettings");
+  const cueToPlay = cues ? cues[cue] : null;
+  console.log("RQG | playAudioCue: ", cue, cues, cueToPlay, vol);
+  if (cueToPlay) {
+    AudioHelper.play(
+      {
+        src: cueToPlay,
+        volume: vol,
+        autoplay: true,
+        loop: false,
+      },
+      false,
+    );
+  } else {
+    rc = { rc: -1, msg: "Cue not found" };
+  }
+  if (rc) console.log("    |", rc.rc, rc.msg);
+  return rc;
 }

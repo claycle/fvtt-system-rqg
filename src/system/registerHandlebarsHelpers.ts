@@ -6,6 +6,7 @@ import {
   getGameUser,
   localize,
   localizeItemType,
+  localizeAudioCuesType,
   toCamelCase,
 } from "./util";
 import { ItemTypeEnum } from "../data-model/item-data/itemTypes";
@@ -59,6 +60,10 @@ export const registerHandlebarsHelpers = function () {
   Handlebars.registerHelper("localizeitemtype", (typeName) => {
     const itemType: ItemTypeEnum = typeName;
     return localizeItemType(itemType);
+  });
+
+  Handlebars.registerHelper("localizeaudiocuetype", (typeName: string) => {
+    return localizeAudioCuesType(typeName);
   });
 
   Handlebars.registerHelper("localizeActiveEffectMode", (mode: string) => {

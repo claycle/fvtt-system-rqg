@@ -10,6 +10,7 @@ import {
   RqgRollTableFlags,
 } from "./data-model/shared/rqgDocumentFlags";
 import { IconSettingsData } from "./applications/defaultItemIconSettings";
+import { AudioCuesSettingsData } from "./applications/defaultAudioCuesSettings";
 
 declare global {
   /** Standard format for data to Foundry SelectOptions handlebar helper */

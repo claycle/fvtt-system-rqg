@@ -64,6 +64,7 @@ export const templatePaths = {
   // Settings
   defaultItemIconSettings: "systems/rqg/applications/defaultItemIconSettings.hbs",
   tokenRulerSettings: "systems/rqg/applications/settings/tokenRulerSettings.hbs",
+  defaultAudioCuesSettings: "systems/rqg/applications/defaultAudioCuesSettings.hbs",
   // Interface
   settings: "systems/rqg/foundryUi/settings.hbs",
   combatTracker: "systems/rqg/combat/tracker.hbs",
