@@ -11,7 +11,7 @@ export const defaultAudioCuesObject: AudioCuesSettingsData = {
 // but that's not working, so for the moment, I hardcode
 
 export const defaultAudioCuesObject: AudioCuesSettingsData = {
-  defend: "public/sounds/notify.wav",
-  spiritmagic: "public/sounds/notify.wav",
-  runemagic: "public/sounds/notify.wav",
+  defend: "sounds/notify.wav",
+  spiritmagic: "sounds/notify.wav",
+  runemagic: "sounds/notify.wav",
 };
