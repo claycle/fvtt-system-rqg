@@ -5,7 +5,7 @@ import { AudioCuesSettingsData } from "../../applications/defaultAudioCuesSettin
 // I want it to be this
 /*
 export const defaultAudioCuesObject: AudioCuesSettingsData = {
-  [AudioCuesEnum.defend]: "public/sounds/notify.wav",
+  [AudioCuesEnum.defend]: "public/sounds/notify.wav",[AudioCuesEnum.spiritmagic]: "public/sounds/notify.wav",[AudioCuesEnum.runemagic]: "public/sounds/notify.wav",
 };
 */
 // but that's not working, so for the moment, I hardcode
